@@ -4,10 +4,18 @@ import {StyleSheet, Text, View} from 'react-native';
 
 const Home = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Home</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: 'black',
+  },
+});
 
 export default Home;
