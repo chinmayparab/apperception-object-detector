@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.apperception"
+        applicationId "com.machinx"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -162,6 +162,14 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+    }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
 
     // applicationVariants are e.g. debug, release
